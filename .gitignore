@@ -9,3 +9,12 @@
 app/app.iml
 .idea/
 *.iml
+app/.gitignore
+app/proguard-rules.pro
+build.gradle
+gradle.properties
+gradle/wrapper/gradle-wrapper.jar
+gradle/wrapper/gradle-wrapper.properties
+gradlew
+gradlew.bat
+settings.gradle
