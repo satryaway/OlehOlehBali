@@ -17,9 +17,9 @@ public abstract class BaseActivity extends AppCompatActivity {
 
     public abstract int setView();
 
-    private TextView activityTitleTV;
-    private ImageView closeActivityIV;
-    private ImageView optionMenuIV;
+    public TextView activityTitleTV;
+    public ImageView closeActivityIV;
+    public ImageView optionMenuIV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

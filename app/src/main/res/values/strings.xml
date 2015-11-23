@@ -10,4 +10,5 @@
     <string name="shopping_cart">Shopping Cart</string>
     <string name="faq">FAQ</string>
     <string name="member">Member</string>
+    <string name="select_product">Select Product</string>
 </resources>
