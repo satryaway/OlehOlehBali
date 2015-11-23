@@ -3,4 +3,11 @@
     <string name="welcome">Welcome</string>
     <string name="indonesia">Indonesia</string>
     <string name="english">English</string>
+    <string name="choose_category">Choose Category</string>
+    <string name="nothing" />
+    <string name="souvenir">Souvenir</string>
+    <string name="culinary">Culinary</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="faq">FAQ</string>
+    <string name="member">Member</string>
 </resources>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include layout="@layout/actionbar_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                style="@style/wrap_content"
+                android:src="@drawable/ic_culinary"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@color/colorAccent"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:text="@string/culinary" />
+        </FrameLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="50dp"
+            android:layout_gravity="center_horizontal">
+
+            <ImageView
+                style="@style/wrap_content"
+                android:src="@drawable/ic_souvenir"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="25dp"/>
+
+            <TextView
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal|bottom"
+                android:background="@color/colorAccent"
+                android:gravity="center_horizontal"
+                android:paddingTop="10dp"
+                android:paddingBottom="5dp"
+                android:textColor="@color/white"
+                android:text="@string/souvenir" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

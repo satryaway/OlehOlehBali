@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="50dp"
+    android:background="@color/colorPrimaryDark"
+    tools:showIn="@layout/choose_category_layout">
+
+    <ImageView
+        android:id="@+id/close_activity_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/nothing"
+        android:padding="10dp"
+        android:src="@drawable/back" />
+
+    <TextView
+        android:id="@+id/activity_title_tv"
+        style="@style/textview_size_small"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:layout_toRightOf="@+id/close_activity_iv"
+        android:text="@string/choose_category"
+        android:textColor="@color/white" />
+
+    <ImageView
+        android:id="@+id/option_menu_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:contentDescription="@string/nothing"
+        android:padding="10dp"
+        android:src="@drawable/setting_button" />
+
+</RelativeLayout>
