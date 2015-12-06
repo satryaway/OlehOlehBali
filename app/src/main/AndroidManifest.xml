@@ -6,6 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".OlehOlehBaliApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -22,6 +23,7 @@
         <activity android:name="com.jixstreet.oleholehbali.SelectProductActivity" />
         <activity android:name="com.jixstreet.oleholehbali.ChooseCategoryActivity" />
         <activity android:name="com.jixstreet.oleholehbali.ProductDetailActivity" />
+        <activity android:name="com.jixstreet.oleholehbali.ShoppingCartActivity" />
     </application>
 
 </manifest>

@@ -1,6 +1,7 @@
 package com.jixstreet.oleholehbali;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.MenuItem;
@@ -22,6 +23,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public ImageView closeActivityIV;
     public ImageView optionMenuIV;
     public RelativeLayout actionBarWrapper;
+    public SharedPreferences sharedPreferences;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +31,7 @@ public abstract class BaseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(setView());
+        sharedPreferences = OlehOlehBaliApplication.getInstance().getSharedPreferences();
         initUI();
         setCallBack();
     }
@@ -45,32 +48,6 @@ public abstract class BaseActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 onBackPressed();
-            }
-        });
-
-        optionMenuIV.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                PopupMenu popup = new PopupMenu(BaseActivity.this, optionMenuIV);
-                popup.getMenuInflater().inflate(R.menu.option_menu, popup.getMenu());
-                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-                    public boolean onMenuItemClick(MenuItem item) {
-                        Intent intent = new Intent();
-                        switch (item.getItemId()) {
-                            case R.id.menu_shopping_cart:
-                                break;
-
-                            case R.id.menu_faq:
-                                break;
-
-                            default:
-                                break;
-                        }
-                        return true;
-                    }
-                });
-
-                popup.show();
             }
         });
     }

@@ -9,8 +9,10 @@ import android.os.Parcelable;
  */
 public class Product implements Parcelable {
     private String id, name, description, imageURL, price, specification, stock, category;
+    private int quantity;
 
-    public Product(){}
+    public Product() {
+    }
 
     public Product(String id, String name, String description, String imageURL) {
         setId(id);
@@ -28,6 +30,7 @@ public class Product implements Parcelable {
         specification = in.readString();
         stock = in.readString();
         category = in.readString();
+        quantity = in.readInt();
     }
 
     public static final Creator<Product> CREATOR = new Creator<Product>() {
@@ -98,6 +101,22 @@ public class Product implements Parcelable {
         this.stock = stock;
     }
 
+    public String getCategory() {
+        return category;
+    }
+
+    public void setCategory(String category) {
+        this.category = category;
+    }
+
+    public int getQuantity() {
+        return quantity;
+    }
+
+    public void setQuantity(int quantity) {
+        this.quantity = quantity;
+    }
+
     @Override
     public int describeContents() {
         return 0;
@@ -113,13 +132,6 @@ public class Product implements Parcelable {
         dest.writeString(specification);
         dest.writeString(stock);
         dest.writeString(category);
-    }
-
-    public String getCategory() {
-        return category;
-    }
-
-    public void setCategory(String category) {
-        this.category = category;
+        dest.writeInt(quantity);
     }
 }

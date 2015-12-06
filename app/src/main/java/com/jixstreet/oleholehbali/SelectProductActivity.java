@@ -3,20 +3,21 @@ package com.jixstreet.oleholehbali;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
-import android.os.Parcelable;
 import android.text.InputType;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.ListView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 
-import com.loopj.android.http.JsonHttpResponseHandler;
 import com.jixstreet.oleholehbali.adapters.ProductListAdapter;
 import com.jixstreet.oleholehbali.models.Product;
 import com.jixstreet.oleholehbali.utils.APIAgent;
 import com.jixstreet.oleholehbali.utils.CommonConstants;
 import com.jixstreet.oleholehbali.utils.Utility;
+import com.loopj.android.http.JsonHttpResponseHandler;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -38,18 +39,20 @@ public class SelectProductActivity extends BaseActivity {
     private List<Product> productList = new ArrayList<>();
     private TextView categoryTV;
     private ImageView categoryIV;
+    private ArrayList<Product> products = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         handleIntent();
         super.onCreate(savedInstanceState);
-        overridePendingTransition(0,0);
+        overridePendingTransition(0, 0);
         retrieveData();
     }
 
     private void handleIntent() {
         Intent intent = getIntent();
         category = intent.getStringExtra(CommonConstants.CATEGORY);
+        products = intent.getParcelableArrayListExtra(CommonConstants.PRODUCTS);
     }
 
     @Override
@@ -84,7 +87,36 @@ public class SelectProductActivity extends BaseActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Intent intent = new Intent(SelectProductActivity.this, ProductDetailActivity.class);
                 intent.putExtra(CommonConstants.PRODUCT, productList.get(position));
-                startActivity(intent);
+                intent.putParcelableArrayListExtra(CommonConstants.PRODUCTS, products);
+                startActivityForResult(intent, CommonConstants.PRODUCT_CODE);
+            }
+        });
+
+        optionMenuIV.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                PopupMenu popup = new PopupMenu(SelectProductActivity.this, optionMenuIV);
+                popup.getMenuInflater().inflate(R.menu.option_menu, popup.getMenu());
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+                    public boolean onMenuItemClick(MenuItem item) {
+                        switch (item.getItemId()) {
+                            case R.id.menu_shopping_cart:
+                                Intent intent = new Intent(SelectProductActivity.this, ShoppingCartActivity.class);
+                                intent.putParcelableArrayListExtra(CommonConstants.PRODUCTS, products);
+                                startActivityForResult(intent, CommonConstants.PRODUCT_CODE);
+                                break;
+
+                            case R.id.menu_faq:
+                                break;
+
+                            default:
+                                break;
+                        }
+                        return true;
+                    }
+                });
+
+                popup.show();
             }
         });
     }
@@ -96,7 +128,7 @@ public class SelectProductActivity extends BaseActivity {
         final ProgressDialog progressDialog = new ProgressDialog(this);
         progressDialog.setMessage(getString(R.string.please_wait));
 
-        APIAgent.get(url, null, new JsonHttpResponseHandler(){
+        APIAgent.get(url, null, new JsonHttpResponseHandler() {
             @Override
             public void onStart() {
                 progressDialog.show();
@@ -139,5 +171,18 @@ public class SelectProductActivity extends BaseActivity {
                 Utility.makeSnackBar(SelectProductActivity.this, getResources().getString(R.string.SERVER_DOWN_MESSAGE));
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        products = data.getParcelableArrayListExtra(CommonConstants.PRODUCTS);
+    }
+
+    @Override
+    public void onBackPressed() {
+        Intent returnIntent = new Intent();
+        returnIntent.putParcelableArrayListExtra(CommonConstants.PRODUCTS, products);
+        setResult(RESULT_CANCELED, returnIntent);
+        super.onBackPressed();
     }
 }

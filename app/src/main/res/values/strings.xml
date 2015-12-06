@@ -26,4 +26,9 @@
     <string name="add_to_cart">Add to cart</string>
     <string name="quantity">Quantity :</string>
     <string name="one">1</string>
+    <string name="please_set_quantity_not_1">Please set quantity at least 1</string>
+    <string name="success_add_item">Successfully added item into cart</string>
+    <string name="your_shopping_cart">Your shopping cart</string>
+    <string name="check_out">Check out</string>
+    <string name="total_payout">Total Payout : IDR</string>
 </resources>

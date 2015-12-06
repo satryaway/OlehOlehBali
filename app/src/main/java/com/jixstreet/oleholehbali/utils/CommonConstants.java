@@ -23,4 +23,8 @@ public class CommonConstants {
     public static String SPECIFICATION = "specification";
     public static String PRICE = "price";
     public static String STOCK = "stock";
+    public static String OOB_APP = "Oleh-Oleh Bali Application";
+    public static String IS_LOGGED_IN = "is_logged_in";
+    public static String PRODUCTS = "products";
+    public static int PRODUCT_CODE = 27;
 }
