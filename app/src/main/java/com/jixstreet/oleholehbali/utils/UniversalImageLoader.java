@@ -1,4 +1,4 @@
-package com.samstudio.oleholehbali.utils;
+package com.jixstreet.oleholehbali.utils;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -14,7 +14,7 @@ import com.nostra13.universalimageloader.core.assist.ImageScaleType;
 import com.nostra13.universalimageloader.core.assist.QueueProcessingType;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingListener;
 import com.nostra13.universalimageloader.core.listener.ImageLoadingProgressListener;
-import com.samstudio.oleholehbali.R;
+import com.jixstreet.oleholehbali.R;
 
 /**
  * Created by M Agung Satrio on 6/26/2015.

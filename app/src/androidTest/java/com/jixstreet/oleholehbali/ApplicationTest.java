@@ -1,4 +1,4 @@
-package com.samstudio.oleholehbali;
+package com.jixstreet.oleholehbali;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

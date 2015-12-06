@@ -1,6 +1,6 @@
-package com.samstudio.oleholehbali.utils;
+package com.jixstreet.oleholehbali.utils;
 
-import com.samstudio.oleholehbali.models.Product;
+import com.jixstreet.oleholehbali.models.Product;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.samstudio.oleholehbali.adapters;
+package com.jixstreet.oleholehbali.adapters;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -8,9 +8,10 @@ import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.samstudio.oleholehbali.R;
-import com.samstudio.oleholehbali.models.Product;
-import com.samstudio.oleholehbali.utils.UniversalImageLoader;
+import com.jixstreet.oleholehbali.R;
+import com.jixstreet.oleholehbali.models.Product;
+import com.jixstreet.oleholehbali.utils.CommonConstants;
+import com.jixstreet.oleholehbali.utils.UniversalImageLoader;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -63,9 +64,14 @@ public class ProductListAdapter extends BaseAdapter {
         }
 
         holder.nameTV.setText(productList.get(position).getName());
-        imageLoader.display(holder.imageIV, productList.get(position).getImageURL());
+        imageLoader.display(holder.imageIV, CommonConstants.SERVICE_GET_PRODUCT_IMAGE + productList.get(position).getImageURL());
 
         return convertView;
+    }
+
+    public void updateContent(List<Product> productList) {
+        this.productList = productList;
+        notifyDataSetChanged();
     }
 
     class ViewHolder {

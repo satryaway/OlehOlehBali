@@ -1,4 +1,4 @@
-package com.samstudio.oleholehbali;
+package com.jixstreet.oleholehbali;
 
 import org.junit.Test;
 

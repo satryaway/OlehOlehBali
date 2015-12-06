@@ -11,4 +11,19 @@
     <string name="faq">FAQ</string>
     <string name="member">Member</string>
     <string name="select_product">Select Product</string>
+    <string name="description">Description</string>
+    <string name="default_description">This is a default description for the image. This is a default description for the image. This is a default description for the image. This is a default description for the image. This is a default description for the image.</string>
+    <string name="price">Price</string>
+    <string name="please_wait">Please wait</string>
+    <string name="RTO">Request Timed Out</string>
+    <string name="SERVER_DOWN_MESSAGE">Server down</string>
+    <string name="default_specification">This is a default specification for the product.</string>
+    <string name="dash">-</string>
+    <string name="specification">Specification</string>
+    <string name="default_price">105,000</string>
+    <string name="idr">IDR</string>
+    <string name="stock">Stock</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="quantity">Quantity :</string>
+    <string name="one">1</string>
 </resources>

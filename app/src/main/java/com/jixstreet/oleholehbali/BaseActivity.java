@@ -1,4 +1,4 @@
-package com.samstudio.oleholehbali;
+package com.jixstreet.oleholehbali;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 /**
@@ -20,6 +21,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     public TextView activityTitleTV;
     public ImageView closeActivityIV;
     public ImageView optionMenuIV;
+    public RelativeLayout actionBarWrapper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,6 +34,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     }
 
     public void initUI() {
+        actionBarWrapper = (RelativeLayout) findViewById(R.id.action_bar_wrapper);
         activityTitleTV = (TextView) findViewById(R.id.activity_title_tv);
         closeActivityIV = (ImageView) findViewById(R.id.close_activity_iv);
         optionMenuIV = (ImageView) findViewById(R.id.option_menu_iv);
@@ -72,5 +75,9 @@ public abstract class BaseActivity extends AppCompatActivity {
         });
     }
 
-
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        overridePendingTransition(0,0);
+    }
 }

@@ -13,15 +13,17 @@
         android:orientation="vertical">
 
         <FrameLayout
+            android:id="@+id/culinary_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal">
 
             <ImageView
                 style="@style/wrap_content"
-                android:src="@drawable/ic_culinary"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="25dp"/>
+                android:layout_marginBottom="25dp"
+                android:contentDescription="@string/nothing"
+                android:src="@drawable/ic_culinary" />
 
             <TextView
                 android:layout_width="100dp"
@@ -29,24 +31,26 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:background="@color/colorAccent"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:paddingBottom="5dp"
-                android:textColor="@color/white"
-                android:text="@string/culinary" />
+                android:paddingTop="10dp"
+                android:text="@string/culinary"
+                android:textColor="@color/white" />
         </FrameLayout>
 
 
         <FrameLayout
+            android:id="@+id/souvenir_wrapper"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="50dp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="50dp">
 
             <ImageView
                 style="@style/wrap_content"
-                android:src="@drawable/ic_souvenir"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="25dp"/>
+                android:layout_marginBottom="25dp"
+                android:contentDescription="@string/nothing"
+                android:src="@drawable/ic_souvenir" />
 
             <TextView
                 android:layout_width="100dp"
@@ -54,10 +58,10 @@
                 android:layout_gravity="center_horizontal|bottom"
                 android:background="@color/colorAccent"
                 android:gravity="center_horizontal"
-                android:paddingTop="10dp"
                 android:paddingBottom="5dp"
-                android:textColor="@color/white"
-                android:text="@string/souvenir" />
+                android:paddingTop="10dp"
+                android:text="@string/souvenir"
+                android:textColor="@color/white" />
         </FrameLayout>
 
     </LinearLayout>
