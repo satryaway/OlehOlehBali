@@ -78,43 +78,59 @@ public class BuyerInformationActivity extends BaseActivity {
 
         if (nameET.getText().toString().isEmpty())
             nameET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setName(nameET.getText().toString());
+        }
 
         if (!Utility.isEmailValid(emailET.getText().toString()))
             emailET.setError(getString(R.string.please_input_a_valid_email));
-        else
+        else {
             totalFilled++;
+            transaction.setEmail(emailET.getText().toString());
+        }
 
         if (phoneET.getText().toString().isEmpty())
             phoneET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setPhone(phoneET.getText().toString());
+        }
 
         if (addressET.getText().toString().isEmpty())
             addressET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setAddress(addressET.getText().toString());
+        }
 
         if (subDistrictET.getText().toString().isEmpty())
             subDistrictET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setSub_district(subDistrictET.getText().toString());
+        }
 
         if (districtET.getText().toString().isEmpty())
             districtET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setDistrict(districtET.getText().toString());
+        }
 
         if (provinceET.getText().toString().isEmpty())
             provinceET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setProvince(provinceET.getText().toString());
+        }
 
         if (postalCodeET.getText().toString().isEmpty())
             postalCodeET.setError(getString(R.string.should_not_be_empty));
-        else
+        else {
             totalFilled++;
+            transaction.setPostal_code(postalCodeET.getText().toString());
+        }
 
         return totalFilled == 8;
     }

@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:showIn="@layout/preview_layout">
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/name" />
+
+        <TextView
+            android:id="@+id/name_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/phone_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/email_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/address" />
+
+        <TextView
+            android:id="@+id/address_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/sub_district" />
+
+        <TextView
+            android:id="@+id/sub_district_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/district" />
+
+        <TextView
+            android:id="@+id/district_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/province" />
+
+        <TextView
+            android:id="@+id/province_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+    <TableRow android:padding="5dp">
+
+        <TextView
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:text="@string/postal_code" />
+
+        <TextView
+            android:id="@+id/postal_code_tv"
+            style="@style/textview_size_x_small"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="@string/dash" />
+
+    </TableRow>
+
+</TableLayout>

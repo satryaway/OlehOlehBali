@@ -8,7 +8,7 @@ public class CommonConstants {
     public static final String BASE_URL = LOCAL_SERVER + "oleholehbali/";
     public static final String SERVICE_GET_PRODUCT_BY_CATEGORY = BASE_URL+ "product/c/";
     public static final String SERVICE_GET_PRODUCT_IMAGE = BASE_URL+ "assets/images/";
-    public static final String COD = "Cash on Deliver";
+    public static final String COD = "Cash on Delivery";
     public static final String VIA_TRANSFER = "Via Transfer";
     public static final String VIA_CC = "Via Credit Card";
     public static String CATEGORY = "category";
@@ -31,4 +31,5 @@ public class CommonConstants {
     public static String PRODUCTS = "products";
     public static int PRODUCT_CODE = 27;
     public static String TRANSACTION = "transaction";
+    public static String PAYMENT_METHOD = "payment_method";
 }

@@ -46,4 +46,7 @@
     <string name="choose_payment_method">Choose Payment Method</string>
     <string name="input_buyer_information">Input Buyer Information</string>
     <string name="please_input_a_valid_email">Please input a valid email</string>
+    <string name="preview">Preview</string>
+    <string name="products_detail">Products Detail.</string>
+    <string name="shipping_detail">Shipping Detail.</string>
 </resources>
