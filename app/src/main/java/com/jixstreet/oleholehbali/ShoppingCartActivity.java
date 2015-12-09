@@ -65,15 +65,14 @@ public class ShoppingCartActivity extends BaseActivity {
     public void setCallBack() {
         super.setCallBack();
 
-        /*cartLV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        checkOutBtn.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Intent intent = new Intent(ShoppingCartActivity.this, ProductDetailActivity.class);
+            public void onClick(View v) {
+                Intent intent = new Intent(ShoppingCartActivity.this, BuyerInformationActivity.class);
                 intent.putParcelableArrayListExtra(CommonConstants.PRODUCTS, products);
-                intent.putExtra(CommonConstants.PRODUCT, products.get(position));
-                startActivityForResult(intent, CommonConstants.PRODUCT_CODE);
+                startActivity(intent);
             }
-        });*/
+        });
     }
 
     private void putData() {

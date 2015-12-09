@@ -24,6 +24,8 @@
         <activity android:name="com.jixstreet.oleholehbali.ChooseCategoryActivity" />
         <activity android:name="com.jixstreet.oleholehbali.ProductDetailActivity" />
         <activity android:name="com.jixstreet.oleholehbali.ShoppingCartActivity" />
+        <activity android:name="com.jixstreet.oleholehbali.BuyerInformationActivity" />
+        <activity android:name="com.jixstreet.oleholehbali.PaymentMethodActivity" />
     </application>
 
 </manifest>

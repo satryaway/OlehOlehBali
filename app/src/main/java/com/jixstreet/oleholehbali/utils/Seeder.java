@@ -23,4 +23,10 @@ public class Seeder {
 
         return productList;
     }
+
+    public static String[] getPaymentMethod() {
+        String[] paymentMethod = new String[]{CommonConstants.COD, CommonConstants.VIA_TRANSFER, CommonConstants.VIA_CC};
+
+        return paymentMethod;
+    }
 }

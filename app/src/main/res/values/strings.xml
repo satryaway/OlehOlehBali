@@ -31,4 +31,19 @@
     <string name="your_shopping_cart">Your shopping cart</string>
     <string name="check_out">Check out</string>
     <string name="total_payout">Total Payout : IDR</string>
+    <string name="buyer_information">Buyer Information</string>
+    <string name="name">Name</string>
+    <string name="phone">Phone</string>
+    <string name="address">Address</string>
+    <string name="sub_district">Sub-district</string>
+    <string name="district">District</string>
+    <string name="province">Province</string>
+    <string name="postal_code">Postal Code</string>
+    <string name="next">Next</string>
+    <string name="email">Email</string>
+    <string name="should_not_be_empty">This field should not be empty</string>
+    <string name="payment_method">Payment Method</string>
+    <string name="choose_payment_method">Choose Payment Method</string>
+    <string name="input_buyer_information">Input Buyer Information</string>
+    <string name="please_input_a_valid_email">Please input a valid email</string>
 </resources>

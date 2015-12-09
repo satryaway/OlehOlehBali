@@ -9,8 +9,12 @@ import com.jixstreet.oleholehbali.models.Product;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 /**
  * Created by satryaway on 12/6/2015.
+ * utilitiy class
  */
 public class Utility {
 
@@ -40,5 +44,18 @@ public class Utility {
         }
 
         return product;
+    }
+
+    public static boolean isEmailValid(String email) {
+        boolean isValid = false;
+
+        String expression = "^[\\w\\.-]+@([\\w\\-]+\\.)+[A-Z]{2,4}$";
+
+        Pattern pattern = Pattern.compile(expression, Pattern.CASE_INSENSITIVE);
+        Matcher matcher = pattern.matcher(email);
+        if (matcher.matches()) {
+            isValid = true;
+        }
+        return isValid;
     }
 }
