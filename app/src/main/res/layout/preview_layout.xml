@@ -101,14 +101,14 @@
                 android:text="@string/dash" />
 
             <Button
-                android:id="@+id/next_btn"
+                android:id="@+id/finish_btn"
                 style="@style/Widget.AppCompat.Button.Colored"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
                 android:layout_margin="10dp"
                 android:layout_marginBottom="50dp"
-                android:text="@string/next" />
+                android:text="@string/finish" />
 
         </LinearLayout>
 

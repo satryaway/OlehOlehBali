@@ -1,135 +1,186 @@
 <?xml version="1.0" encoding="utf-8"?>
-<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     tools:showIn="@layout/preview_layout">
 
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/name" />
+            android:text="@string/name"
+            android:textColor="@color/colorPrimaryDark"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/name_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
-    </TableRow>
+    </LinearLayout>
 
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/phone" />
+            android:text="@string/phone"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/phone_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/email" />
+            android:text="@string/email"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/email_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/address" />
+            android:text="@string/address"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/address_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/sub_district" />
+            android:text="@string/sub_district"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/sub_district_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/district" />
+            android:text="@string/district"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/district_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/province" />
+            android:text="@string/province"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/province_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-    <TableRow android:padding="5dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
 
         <TextView
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
-            android:text="@string/postal_code" />
+            android:text="@string/postal_code"
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/postal_code_tv"
             style="@style/textview_size_x_small"
+            android:layout_width="match_parent"
             android:layout_weight="1"
             android:gravity="right"
             android:text="@string/dash" />
+    </LinearLayout>
 
-    </TableRow>
-
-</TableLayout>
+</LinearLayout>

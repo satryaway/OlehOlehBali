@@ -49,4 +49,5 @@
     <string name="preview">Preview</string>
     <string name="products_detail">Products Detail.</string>
     <string name="shipping_detail">Shipping Detail.</string>
+    <string name="finish">Finish</string>
 </resources>
